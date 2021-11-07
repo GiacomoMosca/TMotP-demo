@@ -1,54 +1,68 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject ghost;
+    private GameObject form = null;
+    private GameObject swappable = null;
+    private List<string> availableForms;
+
     public float moveSpeed;
     public float moveDelay;
     public Transform moveDest;
     public LayerMask stopsMove;
 
-    private bool moveReady = true;
-    private float moveTimer = 0f;
-
-
-    // Start is called before the first frame update
     void Start()
     {
         moveDest.parent = null;
+        availableForms = new List<string> { "Vase" };
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, moveDest.position, moveSpeed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, moveDest.position) == 0f)
+        if (Input.GetKeyDown("r"))
         {
-            if (moveTimer <= 0f) moveReady = true;
-            else moveTimer -= Time.deltaTime;
-        }
-
-        if (moveReady)
-        {
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
-            {
-                MakeMove(new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), moveDelay);
-            }
-            else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
-            {
-                MakeMove(new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), moveDelay);
-            }
+            SceneManager.LoadScene("Main"); //Reload level
+            return;
         }
     }
-    void MakeMove(Vector3 dir, float delay)
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!Physics2D.OverlapCircle(moveDest.position + dir, .2f, stopsMove))
+        swappable = null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (availableForms.Contains(other.tag))
         {
-            moveDest.position += dir;
-            moveReady = false;
-            moveTimer = delay;
+            swappable = other.gameObject;
         }
+    }
+
+    public void SwapIn()
+    {
+        if (form != null || swappable == null) return;
+        form = swappable;
+        form.transform.parent = transform;
+        ghost.GetComponent<SpriteRenderer>().enabled = false;
+        ghost.GetComponent<IForm>().Sleep();
+        form.GetComponent<IForm>().Wake();
+    }
+
+    public void SwapOut()
+    {
+        if (form != null)
+        {
+            form.transform.parent = null;
+            form.GetComponent<IForm>().Sleep();
+            swappable = form;
+        }
+        ghost.GetComponent<SpriteRenderer>().enabled = true;
+        ghost.GetComponent<IForm>().Wake();
+        form = null;
     }
 }
