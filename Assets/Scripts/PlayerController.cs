@@ -6,19 +6,28 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public GameObject ghost;
+    public GameObject marker;
+    private SpriteRenderer ghostSprite;
+    private SpriteRenderer markerSprite;
+
     private GameObject form = null;
     private GameObject swappable = null;
     private List<string> availableForms;
 
     public float moveSpeed;
     public float moveDelay;
-    public Transform moveDest;
+    public Vector3 moveDest;
     public LayerMask stopsMove;
+    public LayerMask pushable;
 
     void Start()
     {
-        moveDest.parent = null;
+        ghostSprite = ghost.GetComponent<SpriteRenderer>();
+        markerSprite = marker.GetComponent<SpriteRenderer>();
+        markerSprite.enabled = false;
+        moveDest = transform.position;
         availableForms = new List<string> { "Vase" };
+        ghost.GetComponent<IForm>().Wake();
     }
 
     void Update()
@@ -33,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         swappable = null;
+        markerSprite.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -40,29 +50,38 @@ public class PlayerController : MonoBehaviour
         if (availableForms.Contains(other.tag))
         {
             swappable = other.gameObject;
+            markerSprite.enabled = true;
         }
     }
 
     public void SwapIn()
     {
         if (form != null || swappable == null) return;
+        markerSprite.enabled = false;
         form = swappable;
         form.transform.parent = transform;
-        ghost.GetComponent<SpriteRenderer>().enabled = false;
+        ghostSprite.enabled = false;
         ghost.GetComponent<IForm>().Sleep();
         form.GetComponent<IForm>().Wake();
     }
 
     public void SwapOut()
     {
-        if (form != null)
-        {
-            form.transform.parent = null;
-            form.GetComponent<IForm>().Sleep();
-            swappable = form;
-        }
-        ghost.GetComponent<SpriteRenderer>().enabled = true;
+        if (form == null) return;
+        markerSprite.enabled = true;
+        form.transform.parent = null;
+        form.GetComponent<IForm>().Sleep();
+        swappable = form;
+        ghostSprite.enabled = true;
         ghost.GetComponent<IForm>().Wake();
         form = null;
+    }
+
+    public void FormDestroyed()
+    {
+        ghostSprite.enabled = true;
+        ghost.GetComponent<IForm>().Wake();
+        form = null;
+        swappable = null;
     }
 }

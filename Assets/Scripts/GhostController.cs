@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class GhostController : MonoBehaviour, IForm
 {
+    public int id;
+
     private GameObject player;
     private PlayerController playerController;
 
+    public int maxMove;
     private bool moveReady = true;
     private float moveTimer = 0f;
     private int moveCount = 0;
@@ -19,9 +22,9 @@ public class GhostController : MonoBehaviour, IForm
 
     void Update()
     {
-        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest.position, playerController.moveSpeed * Time.deltaTime);
+        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, playerController.moveDest.position) == 0f)
+        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
         {
             if (moveTimer <= 0f) moveReady = true;
             else moveTimer -= Time.deltaTime;
@@ -46,25 +49,33 @@ public class GhostController : MonoBehaviour, IForm
 
     void MakeMove(Vector3 dir)
     {
-        if (moveCount >= 3)
-        { //If you did 3 moves
+        if (Physics2D.OverlapCircle(playerController.moveDest + dir, .2f, playerController.stopsMove)) return;
+        if (moveCount >= maxMove)
+        {
             Object.Destroy(this.gameObject);
         }
-        else if (!Physics2D.OverlapCircle(playerController.moveDest.position + dir, .2f, playerController.stopsMove))
+        else
         {
-            playerController.moveDest.position += dir;
+            playerController.moveDest += dir;
             moveReady = false;
             moveTimer = playerController.moveDelay;
-            moveCount++;
+            SetMoveCount(moveCount + 1);
         }
+    }
+
+    void SetMoveCount(int count)
+    {
+        moveCount = count;
+        UIManager.instance.setStep(maxMove - count);
     }
 
     public void Wake()
     {
         this.enabled = true;
+        UIManager.instance.setForm(id);
         moveReady = false;
         moveTimer = playerController.moveDelay * 3;
-        moveCount = 0;
+        SetMoveCount(0);
     }
 
     public void Sleep()
