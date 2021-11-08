@@ -28,6 +28,11 @@ public class VaseController : MonoBehaviour, IForm
 
     void Update()
     { 
+        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f && moveCount > 0)
+        {
+            playerController.SwapOut();
+            Object.Destroy(this.gameObject);
+        }
         player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
@@ -55,26 +60,13 @@ public class VaseController : MonoBehaviour, IForm
 
     void MakeMove(Vector3 dir)
     {
-        bool hasObject = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
-        if (hasObject) return;
-        if (moveCount >= maxMove)
+        while (!Physics2D.OverlapCircle(playerController.moveDest.position + dir, .2f))
         {
-            Object.Destroy(this.gameObject);
-            playerController.FormDestroyed();
-        }
-        else
-        {
-            playerController.moveDest += dir;
+            playerController.moveDest.position += dir;
             moveReady = false;
             moveTimer = playerController.moveDelay;
-            SetMoveCount(moveCount + 1);
         }
-    }
-
-    void SetMoveCount(int count)
-    {
-        moveCount = count;
-        UIManager.instance.setStep(maxMove - count);
+        moveCount++;
     }
 
     public void Wake()
@@ -84,7 +76,7 @@ public class VaseController : MonoBehaviour, IForm
         spriteRenderer.sprite = playerSprite;
         moveReady = false;
         moveTimer = playerController.moveDelay;
-        SetMoveCount(0);
+        moveCount = 0;
     }
 
     public void Sleep()
