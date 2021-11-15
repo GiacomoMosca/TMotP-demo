@@ -5,20 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject ghost;
-    public GameObject marker;
-    private SpriteRenderer ghostSprite;
-    private SpriteRenderer markerSprite;
-
-    private GameObject form = null;
-    private GameObject swappable = null;
-    private List<string> availableForms;
-
     public float moveSpeed;
     public float moveDelay;
     public Vector3 moveDest;
     public LayerMask stopsMove;
     public LayerMask pushable;
+
+    private GameObject form = null;
+    private GameObject swappable = null;
+    private List<string> availableForms;
+
+    [SerializeField]
+    private GameObject ghost;
+    [SerializeField]
+    private GameObject marker;
+    private SpriteRenderer ghostSprite;
+    private SpriteRenderer markerSprite;
 
     void Start()
     {
@@ -81,6 +83,13 @@ public class PlayerController : MonoBehaviour
     {
         ghostSprite.enabled = true;
         ghost.GetComponent<IForm>().Wake();
+        form = null;
+        swappable = null;
+    }
+
+    public void GameOver()
+    {
+        markerSprite.enabled = false;
         form = null;
         swappable = null;
     }

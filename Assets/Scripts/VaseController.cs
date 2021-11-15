@@ -8,12 +8,12 @@ public class VaseController : MonoBehaviour, IForm
 
     private GameObject player;
     private PlayerController playerController;
+    private PushableController pushableController;
 
     public Sprite baseSprite;
     public Sprite playerSprite;
     private SpriteRenderer spriteRenderer;
 
-    public int maxMove;
     private bool moveReady = true;
     private float moveTimer = 0f;
     private int moveCount = 0;
@@ -22,13 +22,20 @@ public class VaseController : MonoBehaviour, IForm
     {
         this.enabled = false;
         player = GameObject.FindGameObjectWithTag("Player");
+        pushableController = this.gameObject.GetComponent<PushableController>();
         playerController = player.GetComponent<PlayerController>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
-    { 
-        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
+    {
+        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f && moveCount > 0)
+        {
+            Object.Destroy(this.gameObject);
+            playerController.FormDestroyed();
+        }
+
+        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime * 1.5f);
 
         if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
         {
@@ -55,43 +62,31 @@ public class VaseController : MonoBehaviour, IForm
 
     void MakeMove(Vector3 dir)
     {
-        bool hasObject = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
-        if (hasObject) return;
-        if (moveCount >= maxMove)
-        {
-            Object.Destroy(this.gameObject);
-            playerController.FormDestroyed();
-        }
-        else
+        for (int i = 0; i < 100 && !Physics2D.OverlapCircle(playerController.moveDest + dir, .2f); i++)
         {
             playerController.moveDest += dir;
-            moveReady = false;
             moveTimer = playerController.moveDelay;
-            SetMoveCount(moveCount + 1);
         }
-    }
-
-    void SetMoveCount(int count)
-    {
-        moveCount = count;
-        UIManager.instance.setStep(maxMove - count);
+        moveCount++;
     }
 
     public void Wake()
     {
         this.enabled = true;
+        pushableController.enabled = false;
         UIManager.instance.setForm(id);
         spriteRenderer.sprite = playerSprite;
         moveReady = false;
         moveTimer = playerController.moveDelay;
-        SetMoveCount(0);
+        moveCount = 0;
+        UIManager.instance.setStep(-1);
     }
 
     public void Sleep()
     {
         this.enabled = false;
+        pushableController.enabled = true;
         spriteRenderer.sprite = baseSprite;
-        moveCount = 0;
     }
 
 }

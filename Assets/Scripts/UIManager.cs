@@ -35,7 +35,10 @@ public class UIManager : MonoBehaviour
 
     public void setStep(int count)
     {
-        if (count == -1) stepSprite.enabled = false;
+        if (count == -1)
+        {
+            stepSprite.enabled = false;
+        }
         else
         {
             stepSprite.enabled = true;

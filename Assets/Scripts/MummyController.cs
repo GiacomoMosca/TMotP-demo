@@ -27,7 +27,7 @@ public class MummyController : MonoBehaviour, IForm
     }
 
     void Update()
-    { 
+    {
         player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
@@ -68,7 +68,7 @@ public class MummyController : MonoBehaviour, IForm
         {
             if (hasPushable.Length > 0)
             {
-                if (!hasPushable[0].gameObject.GetComponent<BoxController>().TryMove(dir)) return;
+                if (!hasPushable[0].gameObject.GetComponent<PushableController>().TryMove(dir)) return;
             }
             playerController.moveDest += dir;
             moveReady = false;

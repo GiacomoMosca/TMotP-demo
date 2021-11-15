@@ -53,6 +53,7 @@ public class GhostController : MonoBehaviour, IForm
         if (moveCount >= maxMove)
         {
             Object.Destroy(this.gameObject);
+            playerController.GameOver();
         }
         else
         {
