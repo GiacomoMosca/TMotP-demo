@@ -1,54 +1,88 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject ghost;
+    public GameObject marker;
+    private SpriteRenderer ghostSprite;
+    private SpriteRenderer markerSprite;
+
+    private GameObject form = null;
+    private GameObject swappable = null;
+    private List<string> availableForms;
+
     public float moveSpeed;
     public float moveDelay;
-    public Transform moveDest;
+    public Vector3 moveDest;
     public LayerMask stopsMove;
+    public LayerMask pushable;
+    public LayerMask button;
 
-    private bool moveReady = true;
-    private float moveTimer = 0f;
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        moveDest.parent = null;
+        ghostSprite = ghost.GetComponent<SpriteRenderer>();
+        markerSprite = marker.GetComponent<SpriteRenderer>();
+        markerSprite.enabled = false;
+        moveDest = transform.position;
+        availableForms = new List<string> { "Vase" };
+        ghost.GetComponent<IForm>().Wake();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, moveDest.position, moveSpeed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, moveDest.position) == 0f)
+        if (Input.GetKeyDown("r"))
         {
-            if (moveTimer <= 0f) moveReady = true;
-            else moveTimer -= Time.deltaTime;
-        }
-
-        if (moveReady)
-        {
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
-            {
-                MakeMove(new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), moveDelay);
-            }
-            else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
-            {
-                MakeMove(new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), moveDelay);
-            }
+            SceneManager.LoadScene("Main"); //Reload level
+            return;
         }
     }
-    void MakeMove(Vector3 dir, float delay)
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!Physics2D.OverlapCircle(moveDest.position + dir, .2f, stopsMove))
+        swappable = null;
+        markerSprite.enabled = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (availableForms.Contains(other.tag))
         {
-            moveDest.position += dir;
-            moveReady = false;
-            moveTimer = delay;
+            swappable = other.gameObject;
+            markerSprite.enabled = true;
         }
+    }
+
+    public void SwapIn()
+    {
+        if (form != null || swappable == null) return;
+        markerSprite.enabled = false;
+        form = swappable;
+        form.transform.parent = transform;
+        ghostSprite.enabled = false;
+        ghost.GetComponent<IForm>().Sleep();
+        form.GetComponent<IForm>().Wake();
+    }
+
+    public void SwapOut()
+    {
+        if (form == null) return;
+        markerSprite.enabled = true;
+        form.transform.parent = null;
+        form.GetComponent<IForm>().Sleep();
+        swappable = form;
+        ghostSprite.enabled = true;
+        ghost.GetComponent<IForm>().Wake();
+        form = null;
+    }
+
+    public void FormDestroyed()
+    {
+        ghostSprite.enabled = true;
+        ghost.GetComponent<IForm>().Wake();
+        form = null;
+        swappable = null;
     }
 }
