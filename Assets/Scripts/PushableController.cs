@@ -8,14 +8,18 @@ public class PushableController : MonoBehaviour
     private PlayerController playerController;
 
     private Vector3 moveDest;
-    private bool isMoving;
+    private bool isMoving = false;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
         moveDest = transform.position;
-        isMoving = false;
+    }
+
+    void OnEnable()
+    {
+        moveDest = transform.position;
     }
 
     void Update()
