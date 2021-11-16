@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PushableController : MonoBehaviour
 {
@@ -9,10 +10,15 @@ public class PushableController : MonoBehaviour
 
     private Vector3 moveDest;
     private bool atDestination = false;
-    private bool fellPit = false;
 
     private bool onButton = false;
     private LayerMask layerButton;
+
+    [SerializeField]
+    private Tile filledTile;
+    private Tilemap pitMap;
+    private Tilemap bgMap;
+    private bool fellPit;
 
     void Start()
     {
@@ -20,6 +26,8 @@ public class PushableController : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
         moveDest = transform.position;
         layerButton += LayerMask.GetMask("Button");
+        pitMap = GameObject.FindGameObjectWithTag("Pit").GetComponent<Tilemap>();
+        bgMap = GameObject.FindGameObjectWithTag("Background").GetComponent<Tilemap>();
     }
 
 
@@ -33,7 +41,10 @@ public class PushableController : MonoBehaviour
         }
         else if (fellPit)
         {
+            pitMap.SetTile(pitMap.WorldToCell(transform.position), null);
+            bgMap.SetTile(pitMap.WorldToCell(transform.position), filledTile);
             Object.Destroy(this.gameObject);
+            this.enabled = false;
             return;
         }
     }
@@ -66,6 +77,7 @@ public class PushableController : MonoBehaviour
 
         if (collided && collidedButton) onButton = true;
         if (collided && collidedPit) fellPit = true;
+
         moveDest += dir;
         return true;
     }

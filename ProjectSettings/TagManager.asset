@@ -12,6 +12,7 @@ TagManager:
   - NextLevel
   - Button
   - Pit
+  - Background
   layers:
   - Default
   - TransparentFX
