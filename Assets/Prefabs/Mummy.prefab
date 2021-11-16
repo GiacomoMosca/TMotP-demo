@@ -100,6 +100,7 @@ MonoBehaviour:
   baseSprite: {fileID: -8373305048438567608, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
   playerSprite: {fileID: 3929110836589008297, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
   maxMove: 6
+  sandTile: {fileID: 11400000, guid: 525306aafecc3a943890e4e702fa2132, type: 2}
 --- !u!61 &1142826516390630433
 BoxCollider2D:
   m_ObjectHideFlags: 0

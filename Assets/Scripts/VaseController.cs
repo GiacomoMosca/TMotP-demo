@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class VaseController : MonoBehaviour, IForm
 {
@@ -16,7 +17,9 @@ public class VaseController : MonoBehaviour, IForm
 
     private bool moveReady = true;
     private float moveTimer = 0f;
-    private int moveCount = 0;
+    private bool shouldBreak = false;
+
+    private Tilemap sandMap;
 
     void Start()
     {
@@ -25,14 +28,14 @@ public class VaseController : MonoBehaviour, IForm
         pushableController = this.gameObject.GetComponent<PushableController>();
         playerController = player.GetComponent<PlayerController>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        sandMap = GameObject.FindGameObjectWithTag("Sand").GetComponent<Tilemap>();
     }
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f && moveCount > 0)
+        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f && shouldBreak)
         {
-            Object.Destroy(this.gameObject);
-            playerController.FormDestroyed();
+            DestroyForm();
         }
 
         player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime * 1.5f);
@@ -62,12 +65,18 @@ public class VaseController : MonoBehaviour, IForm
 
     void MakeMove(Vector3 dir)
     {
+        shouldBreak = true;
         for (int i = 0; i < 100 && !Physics2D.OverlapCircle(playerController.moveDest + dir, .2f); i++)
         {
             playerController.moveDest += dir;
-            moveTimer = playerController.moveDelay;
+            if (sandMap.HasTile(sandMap.WorldToCell(playerController.moveDest)))
+            {
+                shouldBreak = false;
+                break;
+            }
         }
-        moveCount++;
+        moveTimer = playerController.moveDelay;
+        moveReady = false;
     }
 
     public void Wake()
@@ -78,7 +87,7 @@ public class VaseController : MonoBehaviour, IForm
         spriteRenderer.sprite = playerSprite;
         moveReady = false;
         moveTimer = playerController.moveDelay;
-        moveCount = 0;
+        shouldBreak = false;
         UIManager.instance.setStep(-1);
     }
 
@@ -87,6 +96,12 @@ public class VaseController : MonoBehaviour, IForm
         this.enabled = false;
         pushableController.enabled = true;
         spriteRenderer.sprite = baseSprite;
+    }
+
+    void DestroyForm()
+    {
+        Object.Destroy(this.gameObject);
+        playerController.FormDestroyed();
     }
 
 }
