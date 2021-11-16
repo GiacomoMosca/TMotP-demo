@@ -8,6 +8,7 @@ TagManager:
   - Vase
   - Box
   - Button
+  - NextLevel
   layers:
   - Default
   - TransparentFX

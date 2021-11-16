@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask pushable;
     public LayerMask button;
 
+    public Animator transition;
+
     void Start()
     {
         ghostSprite = ghost.GetComponent<SpriteRenderer>();
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown("r"))
         {
-            SceneManager.LoadScene("Main"); //Reload level
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Reload level
             return;
         }
     }
@@ -46,12 +48,20 @@ public class PlayerController : MonoBehaviour
         markerSprite.enabled = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    IEnumerator OnTriggerEnter2D(Collider2D other)
     {
-        if (availableForms.Contains(other.tag))
+        if (other.tag == "Vase")
         {
             swappable = other.gameObject;
             markerSprite.enabled = true;
+        }
+        else if (other.tag == "NextLevel")
+        {
+            transition.SetTrigger("Start");
+
+            yield return new WaitForSeconds(1);
+        
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
