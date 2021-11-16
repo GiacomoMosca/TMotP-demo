@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vase (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070004, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -190,6 +194,10 @@ PrefabInstance:
     - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_Name
       value: Vase (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070004, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
@@ -248,7 +256,8 @@ GameObject:
   - component: {fileID: 331111886}
   - component: {fileID: 331111885}
   - component: {fileID: 331111884}
-  m_Layer: 0
+  - component: {fileID: 331111887}
+  m_Layer: 7
   m_Name: blocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,12 +349,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331111883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 7, z: 0}
+  m_LocalPosition: {x: -7.5, y: -4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &331111887
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331111883}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &469431321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -356,6 +386,10 @@ PrefabInstance:
     - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_Name
       value: Vase (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070004, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
@@ -2234,6 +2268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vase (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070004, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2366,7 +2404,9 @@ GameObject:
   - component: {fileID: 1261234951}
   - component: {fileID: 1261234950}
   - component: {fileID: 1261234952}
-  m_Layer: 10
+  - component: {fileID: 1261234953}
+  - component: {fileID: 1261234954}
+  m_Layer: 0
   m_Name: button
   m_TagString: Button
   m_Icon: {fileID: 0}
@@ -2464,6 +2504,69 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1261234953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261234949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ce7a6403195eb4aa0df4915d4137b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PushButton:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 331111883}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  LeaveButton:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 331111883}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!50 &1261234954
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261234949}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1271791387
 GameObject:
   m_ObjectHideFlags: 0
@@ -6401,6 +6504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vase (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070004, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -6458,6 +6565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vase (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070004, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -6514,6 +6625,10 @@ PrefabInstance:
     - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_Name
       value: Vase (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070004, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
@@ -6643,32 +6758,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1786599281 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7924328115084193095, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
-  m_PrefabInstance: {fileID: 7659832978123244627}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1786599282
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786599281}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 2
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &1899370188
 GameObject:
   m_ObjectHideFlags: 0
@@ -6840,6 +6929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vase
       objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070004, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6897,6 +6990,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1142826516390630434, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -7120,6 +7217,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193089, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7924328115084193090, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
       propertyPath: m_Size.x
       value: 0.5
@@ -7127,6 +7228,10 @@ PrefabInstance:
     - target: {fileID: 7924328115084193090, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
       propertyPath: m_Size.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193090, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7924328115084193090, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
       propertyPath: m_Offset.x

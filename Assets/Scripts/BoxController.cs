@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+
 
 public class BoxController : MonoBehaviour
 {
@@ -9,17 +9,12 @@ public class BoxController : MonoBehaviour
 
     private Vector3 moveDest;
     private bool moving;
-    private List<string> availableForms;
-
-    [Header("push button")]
-    public UnityEvent PushButton;
-
+    
     void Start()
     {
         playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         moveDest = transform.position;
         moving = false;
-        availableForms = new List<string> { "Button" };
     }
 
     void Update()
@@ -36,12 +31,5 @@ public class BoxController : MonoBehaviour
         return true;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (availableForms.Contains(other.tag))
-        {
-            Debug.Log("Invoke");
-            PushButton.Invoke();
-        }
-    }
+    
 }
