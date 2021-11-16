@@ -18,6 +18,7 @@ public class MummyController : MonoBehaviour, IForm
     private bool moveReady = true;
     private float moveTimer = 0f;
     private int moveCount = 0;
+    private bool atDestination = false;
     private Vector3 startingPos;
 
     [SerializeField]
@@ -25,6 +26,8 @@ public class MummyController : MonoBehaviour, IForm
     private Tilemap sandMap;
     private bool isOnSandTile = false;
     private bool isSandy = false;
+
+    private bool fellPit = false;
 
     void Start()
     {
@@ -39,10 +42,21 @@ public class MummyController : MonoBehaviour, IForm
 
     void Update()
     {
-        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
+        atDestination = Vector3.Distance(transform.position, playerController.moveDest) == 0f;
 
-        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
+        if (!atDestination)
         {
+            player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            if (fellPit)
+            {
+                Object.Destroy(this.gameObject);
+                playerController.GameOver();
+                return;
+            }
+
             if (moveTimer <= 0f) moveReady = true;
             else moveTimer -= Time.deltaTime;
 
@@ -50,12 +64,13 @@ public class MummyController : MonoBehaviour, IForm
             {
                 isSandy = true;
             }
-            if (isSandy && !isOnSandTile)
+            else if (isSandy && !isOnSandTile)
             {
                 sandMap.SetTile(sandMap.WorldToCell(transform.position), sandTile);
                 isOnSandTile = true;
             }
         }
+
 
         if (moveReady)
         {
@@ -76,19 +91,26 @@ public class MummyController : MonoBehaviour, IForm
 
     void MakeMove(Vector3 dir)
     {
-        bool hasObject = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
-        Collider2D[] hasPushable = Physics2D.OverlapCircleAll(playerController.moveDest + dir, .2f, playerController.pushable);
-        if (hasObject && hasPushable.Length <= 0) return;
+        Collider2D collided = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
+        bool collidedPushable = false;
+        bool collidedPit = false;
+
+        if (collided)
+        {
+            collidedPushable = (playerController.pushable.value & (1 << collided.gameObject.layer)) > 0;
+            collidedPit = collided.tag == "Pit";
+            if (!collidedPushable && !collidedPit) return;
+        }
+
         if (moveCount >= maxMove)
         {
             DestroyForm();
         }
         else
         {
-            if (hasPushable.Length > 0)
-            {
-                if (!hasPushable[0].gameObject.GetComponent<PushableController>().TryMove(dir)) return;
-            }
+            if (collided && collidedPushable && collided.gameObject.GetComponent<PushableController>().TryMove(dir)) return;
+            if (collided && collidedPit) fellPit = true;
+
             playerController.moveDest += dir;
             moveReady = false;
             moveTimer = playerController.moveDelay;

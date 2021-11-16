@@ -17,9 +17,12 @@ public class VaseController : MonoBehaviour, IForm
 
     private bool moveReady = true;
     private float moveTimer = 0f;
+    private bool atDestination = false;
     private bool shouldBreak = false;
 
     private Tilemap sandMap;
+
+    private bool fellPit = false;
 
     void Start()
     {
@@ -33,17 +36,30 @@ public class VaseController : MonoBehaviour, IForm
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f && shouldBreak)
+        atDestination = Vector3.Distance(transform.position, playerController.moveDest) == 0f;
+
+        if (!atDestination)
         {
-            DestroyForm();
+            player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime * 1.5f);
         }
-
-        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime * 1.5f);
-
-        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
+        else
         {
-            if (moveTimer <= 0f) moveReady = true;
-            else moveTimer -= Time.deltaTime;
+            if (fellPit)
+            {
+                Object.Destroy(this.gameObject);
+                playerController.GameOver();
+                return;
+            }
+            else if (shouldBreak)
+            {
+                DestroyForm();
+                return;
+            }
+            else
+            {
+                if (moveTimer <= 0f) moveReady = true;
+                else moveTimer -= Time.deltaTime;
+            }
         }
 
         if (moveReady)
@@ -66,14 +82,24 @@ public class VaseController : MonoBehaviour, IForm
     void MakeMove(Vector3 dir)
     {
         shouldBreak = true;
-        for (int i = 0; i < 100 && !Physics2D.OverlapCircle(playerController.moveDest + dir, .2f); i++)
+        Collider2D collided = null;
+
+        for (int i = 0; i < 100; i++)
         {
+            collided = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
+            if (collided) break;
             playerController.moveDest += dir;
             if (sandMap.HasTile(sandMap.WorldToCell(playerController.moveDest)))
             {
                 shouldBreak = false;
                 break;
             }
+        }
+
+        if (collided && collided.tag == "Pit")
+        {
+            playerController.moveDest += dir;
+            fellPit = true;
         }
         moveTimer = playerController.moveDelay;
         moveReady = false;

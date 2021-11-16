@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject ghost;
-    public GameObject marker;
+    [SerializeField]
+    private GameObject ghost;
+    [SerializeField]
+    private GameObject marker;
     private SpriteRenderer ghostSprite;
     private SpriteRenderer markerSprite;
 
@@ -20,17 +22,6 @@ public class PlayerController : MonoBehaviour
     public Vector3 moveDest;
     public LayerMask stopsMove;
     public LayerMask pushable;
-
-    private GameObject form = null;
-    private GameObject swappable = null;
-    private List<string> availableForms;
-
-    [SerializeField]
-    private GameObject ghost;
-    [SerializeField]
-    private GameObject marker;
-    private SpriteRenderer ghostSprite;
-    private SpriteRenderer markerSprite;
 
     public LayerMask button;
 
@@ -76,37 +67,6 @@ public class PlayerController : MonoBehaviour
         
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-    }
-
-    public void SwapIn()
-    {
-        if (form != null || swappable == null) return;
-        markerSprite.enabled = false;
-        form = swappable;
-        form.transform.parent = transform;
-        ghostSprite.enabled = false;
-        ghost.GetComponent<IForm>().Sleep();
-        form.GetComponent<IForm>().Wake();
-    }
-
-    public void SwapOut()
-    {
-        if (form == null) return;
-        markerSprite.enabled = true;
-        form.transform.parent = null;
-        form.GetComponent<IForm>().Sleep();
-        swappable = form;
-        ghostSprite.enabled = true;
-        ghost.GetComponent<IForm>().Wake();
-        form = null;
-    }
-
-    public void FormDestroyed()
-    {
-        ghostSprite.enabled = true;
-        ghost.GetComponent<IForm>().Wake();
-        form = null;
-        swappable = null;
     }
 
     public void SwapIn()
