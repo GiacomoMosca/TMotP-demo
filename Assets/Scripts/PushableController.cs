@@ -70,8 +70,8 @@ public class PushableController : MonoBehaviour
 
         if (collided)
         {
-            collidedButton = collided.tag == "Button";
-            collidedPit = collided.tag == "Pit";
+            collidedButton = (collided.tag == "Button");
+            collidedPit = (collided.tag == "Pit");
             if (!collidedButton && !collidedPit) return false;
         }
 

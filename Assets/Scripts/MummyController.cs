@@ -108,8 +108,8 @@ public class MummyController : MonoBehaviour, IForm
         }
         else
         {
-            if (collided && collidedPushable && collided.gameObject.GetComponent<PushableController>().TryMove(dir)) return;
             if (collided && collidedPit) fellPit = true;
+            if (collided && collidedPushable && !collided.gameObject.GetComponent<PushableController>().TryMove(dir)) return;
 
             playerController.moveDest += dir;
             moveReady = false;
