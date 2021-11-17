@@ -41,11 +41,13 @@ public class PushableController : MonoBehaviour
         }
         else if (fellPit)
         {
-            pitMap.SetTile(pitMap.WorldToCell(transform.position), null);
-            bgMap.SetTile(pitMap.WorldToCell(transform.position), filledTile);
+            if (this.tag == "Box")
+            {
+                pitMap.SetTile(pitMap.WorldToCell(transform.position), null);
+                bgMap.SetTile(pitMap.WorldToCell(transform.position), filledTile);
+            }
             Object.Destroy(this.gameObject);
             this.enabled = false;
-            return;
         }
     }
 

@@ -13,6 +13,7 @@ public class LevelLoader : MonoBehaviour
     }
 
     public Animator transition;
+    public float transitionTime = 0.3f;
     
     public Dialogue dialogue;
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class LevelLoader : MonoBehaviour
     {
         transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(transitionTime);
         
         SceneManager.LoadScene(levelIndex);
     }

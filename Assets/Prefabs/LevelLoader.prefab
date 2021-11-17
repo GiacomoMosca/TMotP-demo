@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5536874775133870436}
   - component: {fileID: 5536874775133870437}
   - component: {fileID: 5536874775133870438}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Wipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ Animator:
   m_GameObject: {fileID: 5536874775133870488}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d6836df871a22b742b75463fa5164472, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2cd53215337a53642827a59fb5daa6e7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 5536874775678988742}
   - component: {fileID: 5536874775678988743}
   - component: {fileID: 2213869455215522165}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11.890015, y: -8.860001}
+  m_AnchoredPosition: {x: -11.890015, y: -8.859985}
   m_SizeDelta: {x: 0, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5536874775678988742
