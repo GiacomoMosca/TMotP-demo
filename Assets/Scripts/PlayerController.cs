@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     public void SwapIn()
     {
         if (form != null || swappable == null) return;
+
         markerSprite.enabled = false;
         form = swappable;
         form.transform.parent = transform;
@@ -83,6 +84,7 @@ public class PlayerController : MonoBehaviour
     public void SwapOut()
     {
         if (form == null) return;
+
         markerSprite.enabled = true;
         form.transform.parent = null;
         form.GetComponent<IForm>().Sleep();
