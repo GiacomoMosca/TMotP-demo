@@ -8,6 +8,8 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
 
+    private int sentenceCount = 0;
+
     public Animator animator;
 
     private Queue<string> sentences;
@@ -19,6 +21,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        sentenceCount = 0;
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
@@ -28,10 +31,14 @@ public class DialogueManager : MonoBehaviour
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
-            
+            sentenceCount ++;
         }
         
-        DisplayNextSentence();
+        if (Input.GetKeyDown("enter") || sentenceCount == sentences.Count)
+        {
+            DisplayNextSentence();
+        }
+        
     }
 
     public void DisplayNextSentence()

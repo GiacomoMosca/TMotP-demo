@@ -26,7 +26,6 @@ public class UIManager : MonoBehaviour
     {
         formSprite.sprite = formList[0];
         stepSprite.sprite = stepList[0];
-        FindObjectOfType<DialogueTrigger>().TriggerDialogue();
     }
 
     public void setForm(int count)

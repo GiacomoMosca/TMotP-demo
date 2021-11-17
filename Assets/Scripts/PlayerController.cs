@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour
         markerSprite.enabled = false;
         moveDest = transform.position;
         availableForms = new List<string> { "Vase" };
-        ghost.GetComponent<IForm>().Wake();
-        
+        ghost.GetComponent<IForm>().Wake();  
+        FindObjectOfType<DialogueTrigger>().TriggerDialogue();
     }
 
     void Update()
@@ -44,6 +44,11 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Reload level
             return;
+        }
+
+        if (Input.GetKeyDown("x"))
+        {
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue();
         }
     }
 
@@ -73,6 +78,7 @@ public class PlayerController : MonoBehaviour
     public void SwapIn()
     {
         if (form != null || swappable == null) return;
+		
         markerSprite.enabled = false;
         form = swappable;
         form.transform.parent = transform;
@@ -84,6 +90,7 @@ public class PlayerController : MonoBehaviour
     public void SwapOut()
     {
         if (form == null) return;
+		
         markerSprite.enabled = true;
         form.transform.parent = null;
         form.GetComponent<IForm>().Sleep();
