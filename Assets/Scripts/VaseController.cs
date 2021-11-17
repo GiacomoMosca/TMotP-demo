@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class VaseController : MonoBehaviour, IForm
 {
@@ -16,7 +17,12 @@ public class VaseController : MonoBehaviour, IForm
 
     private bool moveReady = true;
     private float moveTimer = 0f;
-    private int moveCount = 0;
+    private bool atDestination = false;
+    private bool shouldBreak = false;
+
+    private Tilemap sandMap;
+
+    private bool fellPit = false;
 
     void Start()
     {
@@ -25,22 +31,35 @@ public class VaseController : MonoBehaviour, IForm
         pushableController = this.gameObject.GetComponent<PushableController>();
         playerController = player.GetComponent<PlayerController>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        sandMap = GameObject.FindGameObjectWithTag("Sand").GetComponent<Tilemap>();
     }
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f && moveCount > 0)
+        atDestination = Vector3.Distance(transform.position, playerController.moveDest) == 0f;
+
+        if (!atDestination)
         {
-            Object.Destroy(this.gameObject);
-            playerController.FormDestroyed();
+            player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime * 1.5f);
         }
-
-        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime * 1.5f);
-
-        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
+        else
         {
-            if (moveTimer <= 0f) moveReady = true;
-            else moveTimer -= Time.deltaTime;
+            if (fellPit)
+            {
+                Object.Destroy(this.gameObject);
+                playerController.GameOver();
+                return;
+            }
+            else if (shouldBreak)
+            {
+                DestroyForm();
+                return;
+            }
+            else
+            {
+                if (moveTimer <= 0f) moveReady = true;
+                else moveTimer -= Time.deltaTime;
+            }
         }
 
         if (moveReady)
@@ -62,12 +81,28 @@ public class VaseController : MonoBehaviour, IForm
 
     void MakeMove(Vector3 dir)
     {
-        for (int i = 0; i < 100 && !Physics2D.OverlapCircle(playerController.moveDest + dir, .2f); i++)
+        shouldBreak = true;
+        Collider2D collided = null;
+
+        for (int i = 0; i < 100; i++)
+        {
+            collided = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
+            if (collided) break;
+            playerController.moveDest += dir;
+            if (sandMap.HasTile(sandMap.WorldToCell(playerController.moveDest)))
+            {
+                shouldBreak = false;
+                break;
+            }
+        }
+
+        if (collided && collided.tag == "Pit")
         {
             playerController.moveDest += dir;
-            moveTimer = playerController.moveDelay;
+            fellPit = true;
         }
-        moveCount++;
+        moveTimer = playerController.moveDelay;
+        moveReady = false;
     }
 
     public void Wake()
@@ -78,7 +113,7 @@ public class VaseController : MonoBehaviour, IForm
         spriteRenderer.sprite = playerSprite;
         moveReady = false;
         moveTimer = playerController.moveDelay;
-        moveCount = 0;
+        shouldBreak = false;
         UIManager.instance.setStep(-1);
     }
 
@@ -87,6 +122,12 @@ public class VaseController : MonoBehaviour, IForm
         this.enabled = false;
         pushableController.enabled = true;
         spriteRenderer.sprite = baseSprite;
+    }
+
+    void DestroyForm()
+    {
+        Object.Destroy(this.gameObject);
+        playerController.FormDestroyed();
     }
 
 }

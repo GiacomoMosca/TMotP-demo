@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MummyController : MonoBehaviour, IForm
 {
@@ -17,31 +18,65 @@ public class MummyController : MonoBehaviour, IForm
     private bool moveReady = true;
     private float moveTimer = 0f;
     private int moveCount = 0;
+    private bool atDestination = false;
+    private Vector3 startingPos;
+
+    [SerializeField]
+    private Tile sandTile;
+    private Tilemap sandMap;
+    private bool isOnSandTile = false;
+    private bool isSandy = false;
+
+    private bool fellPit = false;
 
     void Start()
     {
         this.enabled = false;
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
+        sandMap = GameObject.FindGameObjectWithTag("Sand").GetComponent<Tilemap>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        startingPos = transform.position;
+        sandMap = GameObject.FindGameObjectWithTag("Sand").GetComponent<Tilemap>();
     }
 
     void Update()
     {
-        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
+        atDestination = Vector3.Distance(transform.position, playerController.moveDest) == 0f;
 
-        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
+        if (!atDestination)
         {
+            player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            if (fellPit)
+            {
+                Object.Destroy(this.gameObject);
+                playerController.GameOver();
+                return;
+            }
+
             if (moveTimer <= 0f) moveReady = true;
             else moveTimer -= Time.deltaTime;
+
+            if (!isSandy && isOnSandTile)
+            {
+                isSandy = true;
+            }
+            else if (isSandy && !isOnSandTile)
+            {
+                sandMap.SetTile(sandMap.WorldToCell(transform.position), sandTile);
+                isOnSandTile = true;
+            }
         }
+
 
         if (moveReady)
         {
             if (Input.GetKeyDown("space"))
             {
-                Object.Destroy(this.gameObject);
-                playerController.FormDestroyed();
+                DestroyForm();
             }
             else if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
@@ -56,24 +91,31 @@ public class MummyController : MonoBehaviour, IForm
 
     void MakeMove(Vector3 dir)
     {
-        bool hasObject = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
-        Collider2D[] hasPushable = Physics2D.OverlapCircleAll(playerController.moveDest + dir, .2f, playerController.pushable);
-        if (hasObject && hasPushable.Length <= 0) return;
+        Collider2D collided = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
+        bool collidedPushable = false;
+        bool collidedPit = false;
+
+        if (collided)
+        {
+            collidedPushable = (playerController.pushable.value & (1 << collided.gameObject.layer)) > 0;
+            collidedPit = collided.tag == "Pit";
+            if (!collidedPushable && !collidedPit) return;
+        }
+
         if (moveCount >= maxMove)
         {
-            Object.Destroy(this.gameObject);
-            playerController.FormDestroyed();
+            DestroyForm();
         }
         else
         {
-            if (hasPushable.Length > 0)
-            {
-                if (!hasPushable[0].gameObject.GetComponent<PushableController>().TryMove(dir)) return;
-            }
+            if (collided && collidedPit) fellPit = true;
+            if (collided && collidedPushable && !collided.gameObject.GetComponent<PushableController>().TryMove(dir)) return;
+
             playerController.moveDest += dir;
             moveReady = false;
             moveTimer = playerController.moveDelay;
             SetMoveCount(moveCount + 1);
+            isOnSandTile = sandMap.HasTile(sandMap.WorldToCell(playerController.moveDest));
         }
     }
 
@@ -88,6 +130,7 @@ public class MummyController : MonoBehaviour, IForm
         this.enabled = true;
         UIManager.instance.setForm(id);
         spriteRenderer.sprite = playerSprite;
+        isSandy = false;
         moveReady = false;
         moveTimer = playerController.moveDelay;
         SetMoveCount(0);
@@ -98,6 +141,14 @@ public class MummyController : MonoBehaviour, IForm
         this.enabled = false;
         spriteRenderer.sprite = baseSprite;
         moveCount = 0;
+    }
+
+    void DestroyForm()
+    {
+        Object.Destroy(this.gameObject);
+        playerController.FormDestroyed();
+        player.transform.position = startingPos;
+        playerController.moveDest = startingPos;
     }
 
 }

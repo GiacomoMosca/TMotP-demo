@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class GhostController : MonoBehaviour, IForm
 {
@@ -13,6 +14,7 @@ public class GhostController : MonoBehaviour, IForm
     private bool moveReady = true;
     private float moveTimer = 0f;
     private int moveCount = 0;
+    private bool atDestination = false;
 
     void Start()
     {
@@ -22,9 +24,13 @@ public class GhostController : MonoBehaviour, IForm
 
     void Update()
     {
-        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
+        atDestination = Vector3.Distance(transform.position, playerController.moveDest) == 0f;
 
-        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
+        if (!atDestination)
+        {
+            player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
+        }
+        else
         {
             if (moveTimer <= 0f) moveReady = true;
             else moveTimer -= Time.deltaTime;
