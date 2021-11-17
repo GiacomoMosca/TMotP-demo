@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask button;
 
     public Animator transition;
+	
+	private DialogueTrigger dialogueTrigger;
 
     void Start()
     {
@@ -36,7 +38,8 @@ public class PlayerController : MonoBehaviour
         markerSprite = marker.GetComponent<SpriteRenderer>();
         markerSprite.enabled = false;
         moveDest = transform.position;
-        availableForms = new List<string> { "Vase" };
+        availableForms = new List<string> { "Vase" }; 
+		dialogueTrigger = FindObjectOfType<DialogueTrigger>();
     }
 
     void Update()
@@ -45,12 +48,17 @@ public class PlayerController : MonoBehaviour
         {
             isInitialized = true;
             ghost.GetComponent<IForm>().Wake();
+			dialogueTrigger.TriggerDialogue();
         }
 
         if (Input.GetKeyDown("r"))
         {
             LevelLoader.instance.RestartLevel();
             return;
+
+        if (Input.GetKeyDown("x"))
+        {
+            dialogueTrigger.TriggerDialogue();
         }
     }
 
