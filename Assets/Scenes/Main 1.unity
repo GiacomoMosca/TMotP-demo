@@ -3082,6 +3082,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1621482950}
     m_Modifications:
     - target: {fileID: -8677139192028544436, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: doors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8677139192028544436, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: doors.Array.data[0]
+      value: 
+      objectReference: {fileID: 1635571821}
+    - target: {fileID: -8677139192028544436, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
       propertyPath: PushButton.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1635571821}

@@ -97,36 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3cb675c92b355643b5d4aa1ca738929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PushButton:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7924328115084193095, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  LeaveButton:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7924328115084193095, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+  interactableObjects:
+    serializedVersion: 2
+    m_Bits: 2048
+  doors: []
+  closedSprite: {fileID: -4246815214487904717, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
+  openSprite: {fileID: 2494556188211802304, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
 --- !u!61 &7924328115084193090
 BoxCollider2D:
   m_ObjectHideFlags: 0

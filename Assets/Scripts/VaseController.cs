@@ -11,8 +11,10 @@ public class VaseController : MonoBehaviour, IForm
     private PlayerController playerController;
     private PushableController pushableController;
 
-    public Sprite baseSprite;
-    public Sprite playerSprite;
+    [SerializeField]
+    private Sprite baseSprite;
+    [SerializeField]
+    private Sprite playerSprite;
     private SpriteRenderer spriteRenderer;
 
     private bool moveReady = true;

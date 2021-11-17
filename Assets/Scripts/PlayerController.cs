@@ -10,12 +10,15 @@ public class PlayerController : MonoBehaviour
     private GameObject ghost;
     [SerializeField]
     private GameObject marker;
+    [SerializeField]
+    private ParticleSystem deathParticles;
     private SpriteRenderer ghostSprite;
     private SpriteRenderer markerSprite;
 
     private GameObject form = null;
     private GameObject swappable = null;
     private List<string> availableForms;
+    private bool isInitialized = false;
 
     public float moveSpeed;
     public float moveDelay;
@@ -34,14 +37,19 @@ public class PlayerController : MonoBehaviour
         markerSprite.enabled = false;
         moveDest = transform.position;
         availableForms = new List<string> { "Vase" };
-        ghost.GetComponent<IForm>().Wake();
     }
 
     void Update()
     {
+        if (!isInitialized)
+        {
+            isInitialized = true;
+            ghost.GetComponent<IForm>().Wake();
+        }
+
         if (Input.GetKeyDown("r"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Reload level
+            LevelLoader.instance.RestartLevel();
             return;
         }
     }
@@ -96,6 +104,7 @@ public class PlayerController : MonoBehaviour
 
     public void FormDestroyed()
     {
+        deathParticles.Play();
         ghostSprite.enabled = true;
         ghost.GetComponent<IForm>().Wake();
         form = null;
@@ -104,6 +113,7 @@ public class PlayerController : MonoBehaviour
 
     public void GameOver()
     {
+        deathParticles.Play();
         markerSprite.enabled = false;
         form = null;
         swappable = null;

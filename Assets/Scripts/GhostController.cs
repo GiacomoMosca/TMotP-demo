@@ -10,7 +10,7 @@ public class GhostController : MonoBehaviour, IForm
     private GameObject player;
     private PlayerController playerController;
 
-    public int maxMove;
+    public int maxMove = 3;
     private bool moveReady = true;
     private float moveTimer = 0f;
     private int moveCount = 0;
@@ -81,6 +81,7 @@ public class GhostController : MonoBehaviour, IForm
         this.enabled = true;
         UIManager.instance.setForm(id);
         moveReady = false;
+        if (!playerController) Start();
         moveTimer = playerController.moveDelay * 3;
         SetMoveCount(0);
     }

@@ -10,8 +10,10 @@ public class MummyController : MonoBehaviour, IForm
     private GameObject player;
     private PlayerController playerController;
 
-    public Sprite baseSprite;
-    public Sprite playerSprite;
+    [SerializeField]
+    private Sprite baseSprite;
+    [SerializeField]
+    private Sprite playerSprite;
     private SpriteRenderer spriteRenderer;
 
     public int maxMove;
@@ -97,7 +99,7 @@ public class MummyController : MonoBehaviour, IForm
 
         if (collided)
         {
-            collidedPushable = (playerController.pushable.value & (1 << collided.gameObject.layer)) > 0;
+            collidedPushable = playerController.pushable == (playerController.pushable | (1 << collided.gameObject.layer));
             collidedPit = collided.tag == "Pit";
             if (!collidedPushable && !collidedPit) return;
         }
