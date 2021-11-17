@@ -5,31 +5,29 @@ using UnityEngine.Events;
 
 public class ButtonControler : MonoBehaviour
 {
-    private List<string> availableForms;
-    [Header("push button")]
-    [Header("leave button")]
+    private List<string> interactableObjects;
+    [Header("Push Button")]
+    [Header("Leave Button")]
     public UnityEvent PushButton;
     public UnityEvent LeaveButton;
     // Start is called before the first frame update
     void Start()
     {
-        availableForms = new List<string> { "Box" };
+        interactableObjects = new List<string> { "Pushable" };
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (availableForms.Contains(other.tag))
+        if (interactableObjects.Contains(LayerMask.LayerToName(other.gameObject.layer)))
         {
-            Debug.Log("Push");
             PushButton.Invoke();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (availableForms.Contains(other.tag))
+        if (interactableObjects.Contains(LayerMask.LayerToName(other.gameObject.layer)))
         {
-            Debug.Log("Leave");
             LeaveButton.Invoke();
         }
     }

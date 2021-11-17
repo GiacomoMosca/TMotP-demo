@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class VaseController : MonoBehaviour, IForm
 {
@@ -8,32 +9,57 @@ public class VaseController : MonoBehaviour, IForm
 
     private GameObject player;
     private PlayerController playerController;
+    private PushableController pushableController;
 
     public Sprite baseSprite;
     public Sprite playerSprite;
     private SpriteRenderer spriteRenderer;
 
-    public int maxMove;
     private bool moveReady = true;
     private float moveTimer = 0f;
-    private int moveCount = 0;
+    private bool atDestination = false;
+    private bool shouldBreak = false;
+
+    private Tilemap sandMap;
+
+    private bool fellPit = false;
 
     void Start()
     {
         this.enabled = false;
         player = GameObject.FindGameObjectWithTag("Player");
+        pushableController = this.gameObject.GetComponent<PushableController>();
         playerController = player.GetComponent<PlayerController>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        sandMap = GameObject.FindGameObjectWithTag("Sand").GetComponent<Tilemap>();
     }
 
     void Update()
-    { 
-        player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime);
+    {
+        atDestination = Vector3.Distance(transform.position, playerController.moveDest) == 0f;
 
-        if (Vector3.Distance(transform.position, playerController.moveDest) == 0f)
+        if (!atDestination)
         {
-            if (moveTimer <= 0f) moveReady = true;
-            else moveTimer -= Time.deltaTime;
+            player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime * 1.5f);
+        }
+        else
+        {
+            if (fellPit)
+            {
+                Object.Destroy(this.gameObject);
+                playerController.GameOver();
+                return;
+            }
+            else if (shouldBreak)
+            {
+                DestroyForm();
+                return;
+            }
+            else
+            {
+                if (moveTimer <= 0f) moveReady = true;
+                else moveTimer -= Time.deltaTime;
+            }
         }
 
         if (moveReady)
@@ -55,43 +81,53 @@ public class VaseController : MonoBehaviour, IForm
 
     void MakeMove(Vector3 dir)
     {
-        bool hasObject = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
-        if (hasObject) return;
-        if (moveCount >= maxMove)
+        shouldBreak = true;
+        Collider2D collided = null;
+
+        for (int i = 0; i < 100; i++)
         {
-            Object.Destroy(this.gameObject);
-            playerController.FormDestroyed();
+            collided = Physics2D.OverlapCircle(playerController.moveDest + dir, .2f);
+            if (collided) break;
+            playerController.moveDest += dir;
+            if (sandMap.HasTile(sandMap.WorldToCell(playerController.moveDest)))
+            {
+                shouldBreak = false;
+                break;
+            }
         }
-        else
+
+        if (collided && collided.tag == "Pit")
         {
             playerController.moveDest += dir;
-            moveReady = false;
-            moveTimer = playerController.moveDelay;
-            SetMoveCount(moveCount + 1);
+            fellPit = true;
         }
-    }
-
-    void SetMoveCount(int count)
-    {
-        moveCount = count;
-        UIManager.instance.setStep(maxMove - count);
+        moveTimer = playerController.moveDelay;
+        moveReady = false;
     }
 
     public void Wake()
     {
         this.enabled = true;
+        pushableController.enabled = false;
         UIManager.instance.setForm(id);
         spriteRenderer.sprite = playerSprite;
         moveReady = false;
         moveTimer = playerController.moveDelay;
-        SetMoveCount(0);
+        shouldBreak = false;
+        UIManager.instance.setStep(-1);
     }
 
     public void Sleep()
     {
         this.enabled = false;
+        pushableController.enabled = true;
         spriteRenderer.sprite = baseSprite;
-        moveCount = 0;
+    }
+
+    void DestroyForm()
+    {
+        Object.Destroy(this.gameObject);
+        playerController.FormDestroyed();
     }
 
 }

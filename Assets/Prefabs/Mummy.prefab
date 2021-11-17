@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8373305048438567608, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +99,8 @@ MonoBehaviour:
   id: 2
   baseSprite: {fileID: -8373305048438567608, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
   playerSprite: {fileID: 3929110836589008297, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
-  maxMove: 6
+  maxMove: 9
+  sandTile: {fileID: 11400000, guid: 525306aafecc3a943890e4e702fa2132, type: 2}
 --- !u!61 &1142826516390630433
 BoxCollider2D:
   m_ObjectHideFlags: 0

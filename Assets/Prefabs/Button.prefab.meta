@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Box.prefab.meta
+guid: 229981755d347674cbeb3c1b81fa32d0
+=======
 guid: 91d2c8678b9e29f4e9f2670a8ce2d2fe
+>>>>>>> Hugo:Assets/LevelLoader.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject ghost;
-    public GameObject marker;
+    [SerializeField]
+    private GameObject ghost;
+    [SerializeField]
+    private GameObject marker;
     private SpriteRenderer ghostSprite;
     private SpriteRenderer markerSprite;
 
@@ -19,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 moveDest;
     public LayerMask stopsMove;
     public LayerMask pushable;
+
     public LayerMask button;
 
     public Animator transition;
@@ -51,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Vase")
+        if (availableForms.Contains(other.tag))
         {
             swappable = other.gameObject;
             markerSprite.enabled = true;
@@ -93,6 +97,13 @@ public class PlayerController : MonoBehaviour
     {
         ghostSprite.enabled = true;
         ghost.GetComponent<IForm>().Wake();
+        form = null;
+        swappable = null;
+    }
+
+    public void GameOver()
+    {
+        markerSprite.enabled = false;
         form = null;
         swappable = null;
     }

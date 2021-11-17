@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class GhostController : MonoBehaviour, IForm
 {
@@ -53,6 +54,7 @@ public class GhostController : MonoBehaviour, IForm
         if (moveCount >= maxMove)
         {
             Object.Destroy(this.gameObject);
+            playerController.GameOver();
         }
         else
         {
