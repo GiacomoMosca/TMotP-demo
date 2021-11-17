@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Tiles/Base/default_pack_10.asset.meta
 guid: 3631699ef89b2d446bcb15a5e5b72623
+=======
+guid: b0e3b0987a68db24387a3d9c20965699
+>>>>>>> Hugo:Assets/Tiles/Base/default_pack_1.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

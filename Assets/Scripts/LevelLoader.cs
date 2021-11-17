@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
+    
+    public Dialogue dialogue;
     // Update is called once per frame
     void Update()
     {

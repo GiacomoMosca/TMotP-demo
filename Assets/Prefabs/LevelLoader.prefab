@@ -204,7 +204,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5536874775678988793}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -218,6 +218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5536874776005152754}
   - component: {fileID: 6794714251822672835}
+  - component: {fileID: 8874844619101395798}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -253,3 +254,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 5536874775133870438}
+--- !u!114 &8874844619101395798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5536874776005152755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7945952caff23047b8ecbb34fad8932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - 
+    - 

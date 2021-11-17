@@ -77,7 +77,7 @@ public class PushableController : MonoBehaviour
 
         if (collided && collidedButton) onButton = true;
         if (collided && collidedPit) fellPit = true;
-
+		
         moveDest += dir;
         return true;
     }
