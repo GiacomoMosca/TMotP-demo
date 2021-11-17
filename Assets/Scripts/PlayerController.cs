@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         moveDest = transform.position;
         availableForms = new List<string> { "Vase" };
         ghost.GetComponent<IForm>().Wake();
+        
     }
 
     void Update()

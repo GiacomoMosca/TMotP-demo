@@ -270,6 +270,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_GameObject: {fileID: 331111883}
   m_Enabled: 1
   m_Density: 1
@@ -292,6 +293,19 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!212 &331111885
 SpriteRenderer:
+=======
+  m_GameObject: {fileID: 60433675}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 875772885}
+  m_Father: {fileID: 1621482950}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!483693784 &60433677
+TilemapRenderer:
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -330,6 +344,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -343,10 +358,115 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &331111886
 Transform:
+=======
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &60433678
+Tilemap:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60433675}
+  m_Enabled: 1
+  m_Tiles:
+  - first: {x: 2, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 2, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 2, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 3
+    m_Data: {fileID: 11400000, guid: b0e3b0987a68db24387a3d9c20965699, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 3
+    m_Data: {fileID: -1077009327518715094, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
+  m_TileMatrixArray:
+  - m_RefCount: 3
+    m_Data:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_TileColorArray:
+  - m_RefCount: 3
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: -5, z: 0}
+  m_Size: {x: 3, y: 5, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!66 &60433679
+CompositeCollider2D:
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_GameObject: {fileID: 331111883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.5, y: -4.5, z: 0}
@@ -356,6 +476,39 @@ Transform:
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &331111887
+=======
+  m_GameObject: {fileID: 60433675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 1
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 60433681}
+    m_ColliderPaths:
+    - - X: 30000000
+        Y: -50000000
+      - X: 30000000
+        Y: -20000000
+      - X: 20000000
+        Y: -20000000
+      - X: 20000000
+        Y: -50000000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 2.999971, y: -5}
+      - {x: 2.999971, y: -2}
+      - {x: 2, y: -2.0000293}
+      - {x: 2.0000293, y: -5}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+--- !u!50 &60433680
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -376,6 +529,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
 --- !u!1001 &469431321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -402,6 +556,321 @@ PrefabInstance:
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.5
+=======
+--- !u!19719996 &60433681
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60433675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!1 &148565076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 148565077}
+  - component: {fileID: 148565079}
+  - component: {fileID: 148565078}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &148565077
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148565076}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1400302143}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &148565078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148565076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 250
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 250
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Continue
+--- !u!222 &148565079
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148565076}
+  m_CullTransparentMesh: 1
+--- !u!1 &219323655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219323656}
+  - component: {fileID: 219323658}
+  - component: {fileID: 219323657}
+  m_Layer: 0
+  m_Name: DialogueText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &219323656
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219323655}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1433395, y: 0.1433395, z: 0.15330976}
+  m_Children: []
+  m_Father: {fileID: 632187622}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -15, y: -0.5}
+  m_SizeDelta: {x: 4500, y: 1000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &219323657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219323655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 250
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 250
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &219323658
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219323655}
+  m_CullTransparentMesh: 1
+--- !u!1001 &235519385
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_Name
+      value: Vase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+--- !u!4 &236103725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+  m_PrefabInstance: {fileID: 1011389379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &300539446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+  m_PrefabInstance: {fileID: 1632417677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &361397258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+  m_PrefabInstance: {fileID: 509305460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &395394633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 395394635}
+  - component: {fileID: 395394634}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &395394634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395394633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a006fac9b0ad8d49afda98f44a2ec69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 1163603553}
+  dialogueText: {fileID: 219323657}
+--- !u!4 &395394635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395394633}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &465173826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_Name
+      value: Vase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.5
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalPosition.z
@@ -437,6 +906,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+=======
+--- !u!4 &465173827 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+  m_PrefabInstance: {fileID: 465173826}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 --- !u!1 &478701650
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,17 +1256,29 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -6, y: -7, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 4
+=======
+  - first: {x: -7, y: -7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 5
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -5, y: -7, z: 0}
+=======
+  - first: {x: -6, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -799,7 +1288,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -4, y: -7, z: 0}
+=======
+  - first: {x: -5, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -809,7 +1302,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -3, y: -7, z: 0}
+=======
+  - first: {x: -4, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -819,7 +1316,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -2, y: -7, z: 0}
+=======
+  - first: {x: -3, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -829,7 +1330,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -1, y: -7, z: 0}
+=======
+  - first: {x: -2, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -839,7 +1344,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 0, y: -7, z: 0}
+=======
+  - first: {x: -1, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -849,7 +1358,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 1, y: -7, z: 0}
+=======
+  - first: {x: 0, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -859,7 +1372,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 2, y: -7, z: 0}
+=======
+  - first: {x: 1, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -869,7 +1386,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 3, y: -7, z: 0}
+=======
+  - first: {x: 2, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -879,7 +1400,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 4, y: -7, z: 0}
+=======
+  - first: {x: 3, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -889,7 +1414,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 5, y: -7, z: 0}
+=======
+  - first: {x: 4, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -899,7 +1428,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 6, y: -7, z: 0}
+=======
+  - first: {x: 5, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -909,7 +1442,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 7, y: -7, z: 0}
+=======
+  - first: {x: 6, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -919,7 +1456,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 8, y: -7, z: 0}
+=======
+  - first: {x: 7, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -929,7 +1470,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: -7, z: 0}
+=======
+  - first: {x: 8, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -939,7 +1484,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: -7, z: 0}
+=======
+  - first: {x: 9, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -949,7 +1498,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: -6, z: 0}
+=======
+  - first: {x: 10, y: -7, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -959,7 +1512,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: -6, z: 0}
+=======
+  - first: {x: -11, y: -6, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -969,7 +1526,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: -6, z: 0}
+=======
+  - first: {x: -10, y: -6, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -979,7 +1540,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: -6, z: 0}
+=======
+  - first: {x: 9, y: -6, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -989,7 +1554,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: -5, z: 0}
+=======
+  - first: {x: 10, y: -6, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -999,7 +1568,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: -5, z: 0}
+=======
+  - first: {x: -11, y: -5, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1009,7 +1582,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: -5, z: 0}
+=======
+  - first: {x: -10, y: -5, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1019,7 +1596,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: -5, z: 0}
+=======
+  - first: {x: 9, y: -5, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1029,7 +1610,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: -4, z: 0}
+=======
+  - first: {x: 10, y: -5, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1039,7 +1624,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: -4, z: 0}
+=======
+  - first: {x: -11, y: -4, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1049,7 +1638,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: -4, z: 0}
+=======
+  - first: {x: -10, y: -4, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1059,7 +1652,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: -4, z: 0}
+=======
+  - first: {x: 9, y: -4, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1069,7 +1666,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: -3, z: 0}
+=======
+  - first: {x: 10, y: -4, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1079,7 +1680,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: -3, z: 0}
+=======
+  - first: {x: -11, y: -3, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1089,7 +1694,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: -3, z: 0}
+=======
+  - first: {x: -10, y: -3, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1099,7 +1708,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: -3, z: 0}
+=======
+  - first: {x: 9, y: -3, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1109,7 +1722,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: -2, z: 0}
+=======
+  - first: {x: 10, y: -3, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1119,7 +1736,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: -2, z: 0}
+=======
+  - first: {x: -11, y: -2, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1129,7 +1750,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: -2, z: 0}
+=======
+  - first: {x: -10, y: -2, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1139,7 +1764,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: -2, z: 0}
+=======
+  - first: {x: 9, y: -2, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1149,7 +1778,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: -1, z: 0}
+=======
+  - first: {x: 10, y: -2, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1159,7 +1792,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: -1, z: 0}
+=======
+  - first: {x: -11, y: -1, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1169,7 +1806,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: -1, z: 0}
+=======
+  - first: {x: -10, y: -1, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1179,7 +1820,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: -1, z: 0}
+=======
+  - first: {x: 9, y: -1, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1189,7 +1834,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: 0, z: 0}
+=======
+  - first: {x: 10, y: -1, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1199,7 +1848,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: 0, z: 0}
+=======
+  - first: {x: -11, y: 0, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1209,7 +1862,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: 0, z: 0}
+=======
+  - first: {x: -10, y: 0, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1219,7 +1876,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: 0, z: 0}
+=======
+  - first: {x: 9, y: 0, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1229,7 +1890,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: 1, z: 0}
+=======
+  - first: {x: 10, y: 0, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1239,7 +1904,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: 1, z: 0}
+=======
+  - first: {x: -11, y: 1, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1249,7 +1918,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: 1, z: 0}
+=======
+  - first: {x: -10, y: 1, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1259,7 +1932,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: 1, z: 0}
+=======
+  - first: {x: 9, y: 1, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1269,7 +1946,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: 2, z: 0}
+=======
+  - first: {x: 10, y: 1, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1279,7 +1960,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: 2, z: 0}
+=======
+  - first: {x: -11, y: 2, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1289,7 +1974,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: 2, z: 0}
+=======
+  - first: {x: -10, y: 2, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1299,7 +1988,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: 2, z: 0}
+=======
+  - first: {x: 9, y: 2, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1309,7 +2002,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: 3, z: 0}
+=======
+  - first: {x: 10, y: 2, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1319,7 +2016,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: 3, z: 0}
+=======
+  - first: {x: -11, y: 3, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1329,7 +2030,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: 3, z: 0}
+=======
+  - first: {x: -10, y: 3, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1339,7 +2044,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: 3, z: 0}
+=======
+  - first: {x: 9, y: 3, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1349,7 +2058,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: 4, z: 0}
+=======
+  - first: {x: 10, y: 3, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1359,7 +2072,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: 4, z: 0}
+=======
+  - first: {x: -11, y: 4, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1369,7 +2086,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: 4, z: 0}
+=======
+  - first: {x: -10, y: 4, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1379,7 +2100,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: 4, z: 0}
+=======
+  - first: {x: 9, y: 4, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1389,7 +2114,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -11, y: 5, z: 0}
+=======
+  - first: {x: 10, y: 4, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1399,7 +2128,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: -10, y: 5, z: 0}
+=======
+  - first: {x: -11, y: 5, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1409,7 +2142,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 9, y: 5, z: 0}
+=======
+  - first: {x: -10, y: 5, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1419,7 +2156,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - first: {x: 10, y: 5, z: 0}
+=======
+  - first: {x: 9, y: 5, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1429,6 +2170,22 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+  - first: {x: -11, y: 6, z: 0}
+=======
+  - first: {x: 10, y: 5, z: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+=======
   - first: {x: -11, y: 6, z: 0}
     second:
       serializedVersion: 2
@@ -1439,6 +2196,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   - first: {x: -10, y: 6, z: 0}
     second:
       serializedVersion: 2
@@ -1859,8 +2617,13 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - m_RefCount: 0
     m_Data: {fileID: 0}
+=======
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 944ed4786b7ab8d4db70b117e94bd9c7, type: 2}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   - m_RefCount: 132
     m_Data: {fileID: 11400000, guid: 3631699ef89b2d446bcb15a5e5b72623, type: 2}
   m_TileSpriteArray:
@@ -1874,10 +2637,17 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 132
     m_Data: {fileID: -5798576630444595080, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 132
+=======
+  - m_RefCount: 1
+    m_Data: {fileID: -2088238605187047605, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
+  m_TileMatrixArray:
+  - m_RefCount: 133
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
     m_Data:
       e00: 1
       e01: 0
@@ -1898,8 +2668,13 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 132
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - m_RefCount: 0
     m_Data: {r: 2.3915e-41, g: 2.3915e-41, b: 2.3915e-41, a: 2.3915e-41}
+=======
+  - m_RefCount: 1
+    m_Data: {r: 0.42352945, g: 0.35686275, b: 0.19607845, a: 1}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1992,6 +2767,45 @@ CompositeCollider2D:
         Y: -80000000
       - X: -70000000
         Y: -80000000
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+=======
+    - - X: -61249923
+        Y: -70000070
+      - X: -60624905
+        Y: -68750034
+      - X: -60624900
+        Y: -68750012
+      - X: -60624900
+        Y: -63124986
+      - X: -60624907
+        Y: -63124960
+      - X: -62499928
+        Y: -59999926
+      - X: -62499974
+        Y: -59999900
+      - X: -65625015
+        Y: -59999900
+      - X: -65625043
+        Y: -59999909
+      - X: -69375076
+        Y: -62499931
+      - X: -69375100
+        Y: -62499975
+      - X: -69375100
+        Y: -66875006
+      - X: -69375099
+        Y: -66875018
+      - X: -68750091
+        Y: -69375049
+      - X: -68750056
+        Y: -69375087
+      - X: -66875024
+        Y: -70000097
+      - X: -66875008
+        Y: -70000100
+      - X: -61249972
+        Y: -70000100
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_CompositePaths:
     m_Paths:
     - - {x: 10.99997, y: -8}
@@ -2010,6 +2824,18 @@ CompositeCollider2D:
       - {x: 5.999971, y: 8}
       - {x: -11, y: 7.9999704}
       - {x: -10.99997, y: -8}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+=======
+    - - {x: -6.125014, y: -7.0000095}
+      - {x: -6.06249, y: -6.874995}
+      - {x: -6.0624943, y: -6.31249}
+      - {x: -6.2500124, y: -5.99999}
+      - {x: -6.562511, y: -5.999995}
+      - {x: -6.9375105, y: -6.250012}
+      - {x: -6.937509, y: -6.6875052}
+      - {x: -6.874992, y: -6.937514}
+      - {x: -6.6874967, y: -7.0000095}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &478701656
@@ -2033,6 +2859,66 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 3
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+=======
+--- !u!1001 &509305460
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_Name
+      value: Vase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +3002,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+=======
+--- !u!4 &564072405 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+  m_PrefabInstance: {fileID: 1378790191}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 --- !u!1 &581492612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,6 +3085,149 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581492612}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+=======
+--- !u!1 &632187621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 632187622}
+  - component: {fileID: 632187624}
+  - component: {fileID: 632187623}
+  m_Layer: 0
+  m_Name: DialogueBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &632187622
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632187621}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1163603552}
+  - {fileID: 219323656}
+  - {fileID: 1400302143}
+  m_Father: {fileID: 1482226764}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 440}
+  m_SizeDelta: {x: 700, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &632187623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632187621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.1792453, g: 0.09892311, b: 0.09892311, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &632187624
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632187621}
+  m_CullTransparentMesh: 1
+--- !u!1001 &722782197
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 60433676}
+    m_Modifications:
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193095, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_Name
+      value: Box
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+--- !u!4 &793157527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+  m_PrefabInstance: {fileID: 1279501830}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 --- !u!1 &806596673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,13 +3292,25 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &995173597
+=======
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &875772885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+  m_PrefabInstance: {fileID: 722782197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &876344021
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
@@ -2275,6 +3324,131 @@ PrefabInstance:
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
       value: 6
+=======
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193095, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+      propertyPath: m_Name
+      value: Box
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+--- !u!1001 &973959033
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630436, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_Name
+      value: Mummy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+--- !u!1001 &1011389379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_Name
+      value: Vase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2282,7 +3456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
       value: 1.5
+=======
+      value: 2.5
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2294,6 +3472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
@@ -2303,6 +3482,17 @@ PrefabInstance:
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+=======
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2318,6 +3508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
 --- !u!1 &1120224556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,6 +3526,177 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+=======
+--- !u!95 &1072230656 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5536874775133870438, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+  m_PrefabInstance: {fileID: 1091765490}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1088864891
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: -8677139192028544436, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: PushButton.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1635571821}
+    - target: {fileID: -8677139192028544436, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: LeaveButton.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1635571821}
+    - target: {fileID: -8677139192028544436, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: PushButton.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: -8677139192028544436, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: LeaveButton.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: -8677139192028544436, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: LeaveButton.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193095, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+--- !u!4 &1088864892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7924328115084193088, guid: 229981755d347674cbeb3c1b81fa32d0, type: 3}
+  m_PrefabInstance: {fileID: 1088864891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1091765490
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152754, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536874776005152755, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874844619101395798, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Wassup Pharaoh
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874844619101395798, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: What are you doing in here?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a551bafa6704ad545bcc26d1198c0c41, type: 3}
+--- !u!1 &1120224556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120224557}
+  - component: {fileID: 1120224559}
+  - component: {fileID: 1120224558}
+  m_Layer: 0
+  m_Name: UIForm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_IsActive: 1
 --- !u!224 &1120224557
 RectTransform:
@@ -2393,7 +3755,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120224556}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
 --- !u!1 &1261234949
+=======
+--- !u!1001 &1120740292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142826516390630436, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+      propertyPath: m_Name
+      value: Mummy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+--- !u!1 &1163603551
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2401,6 +3824,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   - component: {fileID: 1261234951}
   - component: {fileID: 1261234950}
   - component: {fileID: 1261234952}
@@ -2409,10 +3833,19 @@ GameObject:
   m_Layer: 0
   m_Name: button
   m_TagString: Button
+=======
+  - component: {fileID: 1163603552}
+  - component: {fileID: 1163603554}
+  - component: {fileID: 1163603553}
+  m_Layer: 0
+  m_Name: NameText
+  m_TagString: Untagged
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
 --- !u!212 &1261234950
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2466,10 +3899,15 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &1261234951
 Transform:
+=======
+--- !u!224 &1163603552
+RectTransform:
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_GameObject: {fileID: 1261234949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.5, y: -4.5, z: 0}
@@ -2505,11 +3943,28 @@ BoxCollider2D:
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1261234953
+=======
+  m_GameObject: {fileID: 1163603551}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.14333954, y: 0.14333954, z: 0.14333954}
+  m_Children: []
+  m_Father: {fileID: 632187622}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -130, y: 40}
+  m_SizeDelta: {x: 3000, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1163603553
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_GameObject: {fileID: 1261234949}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2549,10 +4004,43 @@ MonoBehaviour:
 --- !u!50 &1261234954
 Rigidbody2D:
   serializedVersion: 4
+=======
+  m_GameObject: {fileID: 1163603551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.9669811, b: 0.9669811, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 250
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1163603554
+CanvasRenderer:
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_GameObject: {fileID: 1261234949}
   m_BodyType: 1
   m_Simulated: 1
@@ -2567,6 +4055,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+=======
+  m_GameObject: {fileID: 1163603551}
+  m_CullTransparentMesh: 1
+--- !u!4 &1171889482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+  m_PrefabInstance: {fileID: 235519385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1184672499 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7924328115084193088, guid: 0dfb842b47c424f4a93354db173b8824, type: 3}
+  m_PrefabInstance: {fileID: 876344021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1260794802 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+  m_PrefabInstance: {fileID: 1120740292}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 --- !u!1 &1271791387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,7 +4108,11 @@ RectTransform:
   - {fileID: 1120224557}
   - {fileID: 581492613}
   m_Father: {fileID: 1689894542}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_RootOrder: 0
+=======
+  m_RootOrder: 1
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2698,6 +4209,71 @@ MonoBehaviour:
   - {fileID: -113178624346733198, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
   - {fileID: -7153028976632733021, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
   - {fileID: -6861619778304113757, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+=======
+--- !u!4 &1272828910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+  m_PrefabInstance: {fileID: 1769089666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1279501830
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_Name
+      value: Vase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 --- !u!1 &1338597260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8012019657098122048, guid: f5f32154571d5da4781f9bc9ac38267b, type: 3}
@@ -2708,6 +4284,199 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8012019657098122049, guid: f5f32154571d5da4781f9bc9ac38267b, type: 3}
   m_PrefabInstance: {fileID: 8012019658075835596}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+=======
+--- !u!1001 &1378790191
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_Name
+      value: Vase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+--- !u!1 &1400302142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400302143}
+  - component: {fileID: 1400302146}
+  - component: {fileID: 1400302145}
+  - component: {fileID: 1400302144}
+  m_Layer: 0
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1400302143
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400302142}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.0784556, y: 0.0784556, z: 0}
+  m_Children:
+  - {fileID: 148565077}
+  m_Father: {fileID: 632187622}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 290, y: -55}
+  m_SizeDelta: {x: 1200, y: 400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1400302144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400302142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1400302145}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1400302145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400302142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5566038, g: 0.50146854, b: 0.50146854, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 0
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1400302146
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400302142}
+  m_CullTransparentMesh: 1
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 --- !u!1 &1425266107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,7 +4489,11 @@ GameObject:
   - component: {fileID: 1425266110}
   - component: {fileID: 1425266109}
   m_Layer: 0
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_Name: Tile_Background
+=======
+  m_Name: TilemapBackground
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2779,7 +4552,11 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_SortingOrder: -1
+=======
+  m_SortingOrder: -2
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -6480,6 +8257,181 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476514676}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!1 &1482226763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482226764}
+  - component: {fileID: 1482226768}
+  - component: {fileID: 1482226767}
+  - component: {fileID: 1482226766}
+  - component: {fileID: 1482226765}
+  m_Layer: 0
+  m_Name: DialogueCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1482226764
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482226763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 632187622}
+  m_Father: {fileID: 1689894542}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1482226765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482226763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f07ed18f72b964d83f066b6abf04db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formSprite: {fileID: 1120224558}
+  formList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  stepSprite: {fileID: 581492614}
+  stepList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1482226766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482226763}
+  m_Enabled: 1
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.4}
+  m_EdgeRadius: 0
+--- !u!50 &1476514680
+Rigidbody2D:
+  serializedVersion: 4
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1482226767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482226763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1482226768
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482226763}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 1
+  m_Camera: {fileID: 1899370190}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!1 &1621482948
+GameObject:
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
+  m_GameObject: {fileID: 1476514676}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -6555,6 +8507,64 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
 --- !u!1001 &1516555129
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1621482950}
+  - component: {fileID: 1621482949}
+  m_Layer: 0
+  m_Name: LevelGrid
+  m_TagString: Grid
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!156049354 &1621482949
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621482948}
+  m_Enabled: 1
+  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 0
+  m_CellSwizzle: 0
+--- !u!4 &1621482950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621482948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1425266108}
+  - {fileID: 478701651}
+  - {fileID: 1885267487}
+  - {fileID: 60433676}
+  - {fileID: 793157527}
+  - {fileID: 1272828910}
+  - {fileID: 361397258}
+  - {fileID: 236103725}
+  - {fileID: 300539446}
+  - {fileID: 1171889482}
+  - {fileID: 564072405}
+  - {fileID: 1743330307}
+  - {fileID: 1868826374}
+  - {fileID: 1184672499}
+  - {fileID: 465173827}
+  - {fileID: 1260794802}
+  - {fileID: 1088864892}
+  - {fileID: 1958472771}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1632417677
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -6571,7 +8581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
       value: 7
+=======
+      value: 8
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6591,15 +8605,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6615,7 +8629,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
 --- !u!1001 &1563603634
+=======
+--- !u!1 &1635571821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7924328115084193095, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+  m_PrefabInstance: {fileID: 1958472770}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1689894541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689894542}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689894542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689894541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1000, y: 1000, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1482226764}
+  - {fileID: 1271791388}
+  - {fileID: 1899370189}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1743330307 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+  m_PrefabInstance: {fileID: 1782358843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1769089666
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -6632,7 +8693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
       value: 4
+=======
+      value: 5
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6640,7 +8705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
       value: -2.5
+=======
+      value: -1.5
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6652,15 +8721,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6676,7 +8745,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
 --- !u!1 &1621482948
+=======
+--- !u!1001 &1782358843
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1621482950}
+    m_Modifications:
+    - target: {fileID: 1320792133067070002, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_Name
+      value: Vase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320792133067070005, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f18c3b6f20efa7749b29afa6875fee17, type: 3}
+--- !u!4 &1868826374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1142826516390630435, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
+  m_PrefabInstance: {fileID: 973959033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1885267486
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6701,6 +8836,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621482948}
   m_Enabled: 1
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
   m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
@@ -6758,6 +8894,172 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_Tiles:
+  - first: {x: -5, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -5, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -4, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -2, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -3, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -3, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -2, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 1, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 11
+    m_Data: {fileID: 11400000, guid: 525306aafecc3a943890e4e702fa2132, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 11
+    m_Data: {fileID: -204500216176967662, guid: fa7c637bde4d7d040b14e96a48fd4020, type: 3}
+  m_TileMatrixArray:
+  - m_RefCount: 11
+    m_Data:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_TileColorArray:
+  - m_RefCount: 11
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: -5, y: -4, z: 0}
+  m_Size: {x: 7, y: 7, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 --- !u!1 &1899370188
 GameObject:
   m_ObjectHideFlags: 0
@@ -6787,7 +9089,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1689894542}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1899370190
 Camera:
@@ -6832,6 +9134,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
 --- !u!1 &2108998183
 GameObject:
   m_ObjectHideFlags: 0
@@ -7049,12 +9352,16 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d949d1806996d9499d11a3324a0b8f6, type: 3}
 --- !u!1001 &5536874775738296551
+=======
+--- !u!1001 &1958472770
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream:Assets/Scenes/Main.unity
     - target: {fileID: 2213869455215522165, guid: 91d2c8678b9e29f4e9f2670a8ce2d2fe, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -7111,6 +9418,82 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 91d2c8678b9e29f4e9f2670a8ce2d2fe, type: 3}
 --- !u!1001 &7582608892304950179
 PrefabInstance:
+=======
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924328115084193095, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+--- !u!4 &1958472771 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7924328115084193088, guid: 44ea5968fe2ece5448ecf9fe3d37fca6, type: 3}
+  m_PrefabInstance: {fileID: 1958472770}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2108998183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108998184}
+  - component: {fileID: 2108998185}
+  m_Layer: 0
+  m_Name: Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108998184
+Transform:
+>>>>>>> Stashed changes:Assets/Scenes/Main 2.unity
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:

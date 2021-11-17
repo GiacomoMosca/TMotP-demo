@@ -66,10 +66,16 @@ public class MummyController : MonoBehaviour, IForm
         }
         else
         {
+<<<<<<< Updated upstream
             if (hasPushable.Length > 0)
             {
                 if (!hasPushable[0].gameObject.GetComponent<BoxController>().TryMove(dir)) return;
             }
+=======
+            if (collided && collidedPushable && collided.gameObject.GetComponent<PushableController>().TryMove(dir)) return;
+            if (collided && collidedPit) fellPit = true;
+
+>>>>>>> Stashed changes
             playerController.moveDest += dir;
             moveReady = false;
             moveTimer = playerController.moveDelay;

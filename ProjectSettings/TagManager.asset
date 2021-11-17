@@ -8,7 +8,11 @@ TagManager:
   - Vase
   - Box
   - Button
+<<<<<<< Updated upstream
   - NextLevel
+=======
+  - Pit
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
