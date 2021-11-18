@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
     }
 
     [SerializeField]
+    private GameObject reloadPrompt;
+
+    [SerializeField]
     private Image formSprite;
     [SerializeField]
     private Sprite[] formList;
@@ -24,9 +27,14 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        reloadPrompt.SetActive(false);
         formSprite.sprite = formList[0];
         stepSprite.sprite = stepList[0];
-        FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+    }
+
+    public void ShowPrompt()
+    {
+        reloadPrompt.SetActive(true);
     }
 
     public void setForm(int count)

@@ -74,7 +74,7 @@ public class MummyController : MonoBehaviour, IForm
         }
 
 
-        if (moveReady)
+        if (moveReady && !playerController.isFrozen && !playerController.isPaused)
         {
             if (Input.GetKeyDown("space"))
             {
@@ -117,6 +117,7 @@ public class MummyController : MonoBehaviour, IForm
             moveReady = false;
             moveTimer = playerController.moveDelay;
             SetMoveCount(moveCount + 1);
+            SFXController.instance.PlaySound("mummyStep");
             isOnSandTile = sandMap.HasTile(sandMap.WorldToCell(playerController.moveDest));
         }
     }
@@ -147,6 +148,7 @@ public class MummyController : MonoBehaviour, IForm
 
     void DestroyForm()
     {
+        SFXController.instance.PlaySound("mummyDeath");
         Object.Destroy(this.gameObject);
         playerController.FormDestroyed();
         player.transform.position = startingPos;

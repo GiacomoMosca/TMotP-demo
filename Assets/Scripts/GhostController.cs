@@ -36,7 +36,7 @@ public class GhostController : MonoBehaviour, IForm
             else moveTimer -= Time.deltaTime;
         }
 
-        if (moveReady)
+        if (moveReady && !playerController.isFrozen && !playerController.isPaused)
         {
             if (Input.GetKeyDown("space"))
             {
@@ -67,6 +67,7 @@ public class GhostController : MonoBehaviour, IForm
             moveReady = false;
             moveTimer = playerController.moveDelay;
             SetMoveCount(moveCount + 1);
+            SFXController.instance.PlaySound("ghostStep");
         }
     }
 

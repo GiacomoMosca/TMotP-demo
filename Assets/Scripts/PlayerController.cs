@@ -26,11 +26,10 @@ public class PlayerController : MonoBehaviour
     public LayerMask stopsMove;
     public LayerMask pushable;
 
-    public LayerMask button;
-
-    public Animator transition;
+    public LayerMask buttonMask;
 	
-	private DialogueTrigger dialogueTrigger;
+    public bool isFrozen = false;
+    public bool isPaused = false;
 
     void Start()
     {
@@ -38,8 +37,7 @@ public class PlayerController : MonoBehaviour
         markerSprite = marker.GetComponent<SpriteRenderer>();
         markerSprite.enabled = false;
         moveDest = transform.position;
-        availableForms = new List<string> { "Vase" }; 
-		dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+        availableForms = new List<string> { "Vase", "Mummy" }; 
     }
 
     void Update()
@@ -48,17 +46,26 @@ public class PlayerController : MonoBehaviour
         {
             isInitialized = true;
             ghost.GetComponent<IForm>().Wake();
-			dialogueTrigger.TriggerDialogue();
         }
 
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKeyDown("escape"))
+        {
+            if (isPaused)
+            {
+                PauseMenu.instance.Resume();
+                isPaused = false;
+            }
+            else
+            {
+                PauseMenu.instance.Pause();
+                isPaused = true;
+            }
+        }
+
+        if (Input.GetKeyDown("r") && Time.timeScale != 0f)
         {
             LevelLoader.instance.RestartLevel();
             return;
-
-        if (Input.GetKeyDown("x"))
-        {
-            dialogueTrigger.TriggerDialogue();
         }
     }
 
@@ -68,7 +75,7 @@ public class PlayerController : MonoBehaviour
         markerSprite.enabled = false;
     }
 
-    IEnumerator OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (availableForms.Contains(other.tag))
         {
@@ -77,11 +84,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.tag == "NextLevel")
         {
-            transition.SetTrigger("Start");
-
-            yield return new WaitForSeconds(1);
-        
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SFXController.instance.PlaySound("nextRoom");
+            LevelLoader.instance.LoadNextLevel();
         }
     }
 
@@ -95,6 +99,7 @@ public class PlayerController : MonoBehaviour
         ghostSprite.enabled = false;
         ghost.GetComponent<IForm>().Sleep();
         form.GetComponent<IForm>().Wake();
+        SFXController.instance.PlaySound("transformIn");
     }
 
     public void SwapOut()
@@ -108,6 +113,7 @@ public class PlayerController : MonoBehaviour
         ghostSprite.enabled = true;
         ghost.GetComponent<IForm>().Wake();
         form = null;
+        SFXController.instance.PlaySound("transformOut");
     }
 
     public void FormDestroyed()
@@ -122,8 +128,10 @@ public class PlayerController : MonoBehaviour
     public void GameOver()
     {
         deathParticles.Play();
+        SFXController.instance.PlaySound("death");
         markerSprite.enabled = false;
         form = null;
         swappable = null;
+        UIManager.instance.ShowPrompt();
     }
 }

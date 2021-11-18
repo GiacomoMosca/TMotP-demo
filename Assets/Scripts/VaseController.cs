@@ -20,6 +20,7 @@ public class VaseController : MonoBehaviour, IForm
     private bool moveReady = true;
     private float moveTimer = 0f;
     private bool atDestination = false;
+    private bool isRolling = false;
     private bool shouldBreak = false;
 
     private Tilemap sandMap;
@@ -42,10 +43,16 @@ public class VaseController : MonoBehaviour, IForm
 
         if (!atDestination)
         {
+            isRolling = true;
             player.transform.position = Vector3.MoveTowards(player.transform.position, playerController.moveDest, playerController.moveSpeed * Time.deltaTime * 1.5f);
         }
         else
         {
+            if (isRolling)
+            {
+                isRolling = false;
+                SFXController.instance.StopSound();
+            }
             if (fellPit)
             {
                 Object.Destroy(this.gameObject);
@@ -64,7 +71,7 @@ public class VaseController : MonoBehaviour, IForm
             }
         }
 
-        if (moveReady)
+        if (moveReady && !playerController.isFrozen && !playerController.isPaused)
         {
             if (Input.GetKeyDown("space"))
             {
@@ -105,6 +112,8 @@ public class VaseController : MonoBehaviour, IForm
         }
         moveTimer = playerController.moveDelay;
         moveReady = false;
+
+        if (Vector3.Distance(transform.position, playerController.moveDest) != 0f) SFXController.instance.PlaySound("vaseRoll");
     }
 
     public void Wake()
@@ -128,6 +137,7 @@ public class VaseController : MonoBehaviour, IForm
 
     void DestroyForm()
     {
+        SFXController.instance.PlaySound("destroyVase");
         Object.Destroy(this.gameObject);
         playerController.FormDestroyed();
     }

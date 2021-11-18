@@ -5,68 +5,120 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text nameText;
-    public Text dialogueText;
+    public static DialogueManager instance;
 
-    private int sentenceCount = 0;
+    private void Awake()
+    {
+        instance = this;
+    }
 
-    public Animator animator;
+    [SerializeField]
+    private float textSpeed;
+    [SerializeField]
+    private List<Dialogue> dialogue;
+    [SerializeField]
+    private GameObject dialogueBox;
+    [SerializeField]
+    private Text nameText;
+    [SerializeField]
+    private Text dialogueText;
+    [SerializeField]
+    private Image speakerSprite;
+    [SerializeField]
+    private Image arrowSprite;
 
-    private Queue<string> sentences;
+    [SerializeField]
+    private List<string> names;
+    [SerializeField]
+    private List<Sprite> sprites;
+
+    private Queue<Dialogue> sentences;
+    private Dialogue current;
+
+    private bool isRunning = false;
+    private bool isTyping = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
+        sentences = new Queue<Dialogue>(dialogue);
+        dialogueBox.SetActive(false);
+        nameText.text = "";
+        dialogueText.text = "";
+        speakerSprite.sprite = null;
+        arrowSprite.enabled = false;
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    void Update()
     {
-        sentenceCount = 0;
-        animator.SetBool("IsOpen", true);
-
-        nameText.text = dialogue.name;
-
-        sentences.Clear();
-
-        foreach (string sentence in dialogue.sentences)
+        if (isRunning)
         {
-            sentences.Enqueue(sentence);
-            sentenceCount ++;
-        }
-        
-        if (Input.GetKeyDown("enter") || sentenceCount == sentences.Count)
-        {
-            DisplayNextSentence();
+            if (Input.GetKeyDown("space"))
+            {
+                if (isTyping) FinishSentence(current);
+                else DisplayNextSentence();
+            }
         }
     }
 
-    public void DisplayNextSentence()
+    public void StartDialogue()
     {
-        if(sentences.Count == 0)
+        isRunning = true;
+        dialogueBox.SetActive(true);
+        nameText.text = "";
+        dialogueText.text = "";
+        speakerSprite.sprite = null;
+        arrowSprite.enabled = false;
+        DisplayNextSentence();
+    }
+
+    private void DisplayNextSentence()
+    {
+        if (!isRunning) return;
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-        string sentence = sentences.Dequeue();
-        Debug.Log("Start Dialogue:" + sentence);
+        current = sentences.Dequeue();
+        isTyping = true;
+        nameText.text = current.name;
+        dialogueText.text = "";
+        int index = names.IndexOf(current.name);
+        if (index < 0) speakerSprite.sprite = null;
+        else speakerSprite.sprite = sprites[index];
+        arrowSprite.enabled = false;
+
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(current));
     }
 
-    IEnumerator TypeSentence(string sentence)
+    IEnumerator TypeSentence(Dialogue sentence)
     {
-        dialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray())
+        yield return new WaitForSeconds(0.3f);
+        foreach (char letter in sentence.text.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            SFXController.instance.PlaySound("dialogue");
+            yield return new WaitForSeconds(textSpeed);
         }
+        arrowSprite.enabled = true;
+        isTyping = false;
     }
 
-    void EndDialogue()
+    private void FinishSentence(Dialogue sentence)
     {
-        animator.SetBool("IsOpen", false);
-        Debug.Log("End dialogue");
+        StopAllCoroutines();
+        dialogueText.text = current.text;
+        arrowSprite.enabled = true;
+        isTyping = false;
+    }
+
+    private void EndDialogue()
+    {
+        isRunning = false;
+        dialogueBox.SetActive(false);
+        LevelLoader.instance.UnfreezePlayer();
     }
 }

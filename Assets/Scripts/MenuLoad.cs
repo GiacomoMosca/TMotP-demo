@@ -7,7 +7,8 @@ public class MenuLoad : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SFXController.instance.PlaySound("start");
+        LevelLoader.instance.LoadNextLevel();
     }
 
     public void QuitGame()
